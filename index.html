@@ -185,6 +185,18 @@ footer{background:var(--cream2);padding:26px 0;font-size:13px;text-align:center;
 .person{position:relative;overflow:hidden}
 .person::after{content:"";position:absolute;right:-18px;bottom:-18px;width:64px;height:64px;background:url(kvitka.png) center/contain no-repeat;opacity:.18}
 
+/* чому це важливо */
+.why{background:var(--blue);color:var(--white)}
+.why h2{color:var(--yellow)}
+.why .lead{color:var(--white)}
+.why .eyebrow{color:var(--white)}
+.whys{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:30px}
+.whyc{position:relative;background:var(--white);color:var(--text);border-radius:22px;padding:30px 28px 28px;overflow:hidden}
+.whyc h3{font-size:22px;color:var(--ink);font-weight:900}
+.whyc .n{position:absolute;right:20px;top:6px;font-size:72px;font-weight:900;color:var(--yellow);opacity:.45;line-height:1}
+.whyc p{font-size:16px}
+.whyc::after{content:"";position:absolute;left:0;right:0;bottom:0;height:8px;background:var(--yellow)}
+
 /* історія героя */
 .story{display:grid;grid-template-columns:.85fr 1.15fr;gap:44px;align-items:center;margin-top:30px}
 .story .ph{position:relative}
@@ -227,6 +239,7 @@ footer{background:var(--cream2);padding:26px 0;font-size:13px;text-align:center;
   .fact:nth-child(2){border-right:0}
   .fact:nth-child(-n+2){border-bottom:1px dashed var(--beige)}
   .story{grid-template-columns:1fr;gap:34px}
+  .whys{grid-template-columns:1fr}
   .story .ph{max-width:420px;margin:0 auto}
   .quote .fl{width:80px;opacity:.5}
 }
@@ -295,6 +308,28 @@ footer{background:var(--cream2);padding:26px 0;font-size:13px;text-align:center;
       <p>Карітас України дає методологію, редагування й поширення історій. Пише їх комунікаційник вашого бренду або наш підрядник. Компанія відкриває двері: допомагає знайти героїв і поділитися їхніми історіями з командою.</p>
     </div>
     <img class="art" src="vazon.png" alt="" width="400" height="400">
+  </div>
+</section>
+
+<section id="why" class="why">
+  <div class="wrap">
+    <div class="eyebrow">Чому це важливо</div>
+    <h2>Що відчуває людина, коли її бачать</h2>
+    <p class="lead">Ця програма — не про імідж компанії. Вона про дві речі, які змінюють людину зсередини.</p>
+    <div class="whys">
+      <div class="whyc">
+        <span class="n">01</span>
+        <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4.5 13.5H11L10 22l8.5-11.5H12z"/></svg></div>
+        <h3>Енергія від визнання</h3>
+        <p>Коли колеги помічають, що ти робиш і ким ти є поза посадою, з'являються нова енергія й мотивація. Людина відчуває: моя унікальність має значення. І з цим відчуттям хочеться діяти ще більше — і у своїй справі, і в роботі, і в команді.</p>
+      </div>
+      <div class="whyc">
+        <span class="n">02</span>
+        <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.4-9.3-9A5.2 5.2 0 0 1 12 6a5.2 5.2 0 0 1 9.3 6C19 16.6 12 21 12 21z"/><path d="M12 10v5M9.5 12.5h5"/></svg></div>
+        <h3>Кожна людина — цінність</h3>
+        <p>Програма підсвічує просту річ: кожна людина в команді — цінність. Особливо це видно в дії. Коли колега тихо допомагає іншим, ми бачимо, з чого насправді складається наша спільна сила — з таких людей, як ті, що сидять поруч.</p>
+      </div>
+    </div>
   </div>
 </section>
 
