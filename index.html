@@ -226,6 +226,21 @@ footer{background:var(--cream2);padding:26px 0;font-size:13px;text-align:center;
 .final .bigfl.r{right:-60px;top:-20px;transform:scaleX(-1)}
 .final .wrap{z-index:1}
 
+/* як розповісти команді */
+.share{background:var(--blue);color:var(--white)}
+.share h2{color:var(--yellow)}
+.share .lead{color:var(--white)}
+.share .eyebrow{color:var(--white)}
+.share-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.share-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.share-cta button{font:inherit;font-weight:700;text-transform:uppercase;font-size:14px;letter-spacing:.04em;cursor:pointer;border:0}
+.share-url{margin-top:12px;font-size:13px;opacity:.8;word-break:break-all}
+.share-steps{list-style:none;counter-reset:s;display:grid;gap:12px}
+.share-steps li{counter-increment:s;position:relative;background:var(--white);color:var(--text);border-radius:18px;padding:18px 20px 18px 74px;font-size:15.5px}
+.share-steps li::before{content:counter(s);position:absolute;left:18px;top:18px;width:40px;height:40px;border-radius:50%;background:var(--yellow);color:var(--ink);font-weight:900;font-size:18px;display:grid;place-items:center}
+.share-steps b{display:block;color:var(--ink);font-size:17px;margin-bottom:2px}
+@media (max-width:900px){.share-grid{grid-template-columns:1fr;gap:30px}}
+
 /* чому ми це придумали */
 .hand{font-family:"Caveat",cursive;font-weight:700;color:var(--blue);line-height:1}
 .believe{background:var(--cream2)}
@@ -291,6 +306,7 @@ footer{background:var(--cream2);padding:26px 0;font-size:13px;text-align:center;
     <div class="cta">
       <a class="btn" href="#how">Як це працює</a>
       <a class="btn o" href="#next">Домовитися про зустріч</a>
+      <a class="btn y" href="heroi/">Як розповісти героям</a>
     </div>
   </div>
 </header>
@@ -355,23 +371,23 @@ footer{background:var(--cream2);padding:26px 0;font-size:13px;text-align:center;
   <div class="wrap believe-grid">
     <div class="bl-head">
       <div class="eyebrow">Чому ми це придумали</div>
-      <h2>Бо найкраще добро — тихе</h2>
-      <p class="lead">Ми в Карітасі давно це помітили: найсильніше добро робиться не на сцені. Його роблять на кухнях, у під'їздах, у шкільних класах після уроків. Тихо. Поруч. Щодня.</p>
+      <h2>Знайти своє — і віддати своїм</h2>
+      <p class="lead">Ми віримо: допомога, яка наповнює серце, дає паростки всім навколо. І ще віримо, що покликання — це наша справжня українська генетика: знайти своє і віддати своїм. Найчастіше це відбувається тихо — на кухні в сусідки, у під'їзді, у класі після уроків.</p>
       <p class="sign"><span class="hand">рука до руки</span></p>
       <img class="bl-art" src="vazon.png" alt="" width="400" height="400">
     </div>
     <div class="beliefs">
       <div class="belief">
         <div class="bi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v2M5.6 5.6l1.4 1.4M3 12h2M19 12h2M17 7l1.4-1.4"/><path d="M8 15a4 4 0 1 1 8 0"/><path d="M4 19h16"/></svg></div>
-        <div><h3>Добро, яке не кричить</h3><p>Воно не збирає лайків і не чекає «дякую». Сусідка заносить гарячий суп літньому чоловікові з третього поверху. Вчителька лишається після уроків із дитиною, якій зараз важко. Ніхто цього не фотографує — а світ тримається саме на цьому.</p></div>
+        <div><h3>Тиха допомога поруч</h3><p>Сусідка заносить суп літньому чоловікові з третього поверху. Вчителька лишається після уроків з дитиною, якій зараз важко. Про таке рідко пишуть — а ми хочемо.</p></div>
       </div>
       <div class="belief">
         <div class="bi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 11V7.5a1.5 1.5 0 0 1 3 0V11"/><path d="M10 10V5.5a1.5 1.5 0 0 1 3 0V10"/><path d="M13 10V6.5a1.5 1.5 0 0 1 3 0V12"/><path d="M16 9.5a1.5 1.5 0 0 1 3 0V14a7 7 0 0 1-7 7h-.5a6 6 0 0 1-4.6-2.2L4 15.4a1.5 1.5 0 0 1 2.3-2L8 15V9.5"/></svg></div>
-        <div><h3>Рука до руки — це найсолодше</h3><p>Переказати гроші — важливо. Але є інша радість: бути поруч, тримати людину за руку й бачити, як їй легшає просто зараз. Цю мить не замінить жоден звіт. Сковорода називав таке «сродною працею» — і, здається, точно знав, про що каже.</p></div>
+        <div><h3>Рука до руки</h3><p>Гроші — це важливо. Але є ще одна радість: бути поруч і бачити, що людині стало легше. Сковорода називав таке «сродною працею» — коли робиш те, до чого лежить душа.</p></div>
       </div>
       <div class="belief">
         <div class="bi"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg></div>
-        <div><h3>Бути поруч щодня — це захоплює</h3><p>Одна акція — це добре. А прийти завтра. І післязавтра. І через рік — це вже покликання. Такі люди непомітно тримають на собі цілі світи. І ми просто не можемо перестати ними захоплюватися.</p></div>
+        <div><h3>Бути поруч щодня</h3><p>Одна акція — це добре. А коли людина приходить і завтра, і через місяць, і через рік — це вже покликання. Нас такі люди щиро захоплюють.</p></div>
       </div>
     </div>
   </div>
@@ -523,13 +539,34 @@ footer{background:var(--cream2);padding:26px 0;font-size:13px;text-align:center;
     <p class="lead">Пропонуємо пілот на 3 місяці, далі — спільне рішення про постійний формат. Терміни й кількість історій узгодимо разом.</p>
     <ol class="steps">
       <li><div><span class="when">Тиждень 1</span><b>Зустріч з HR</b>Узгоджуємо цілі, канали, правила згоди й контактну особу від компанії. Вирішуємо, хто пише історії: ваш комунікаційник чи наш підрядник.</div></li>
-      <li class="y"><div><span class="when">Тижні 2–3</span><b>Запрошення до команди</b>Коротке відео чи лист від керівництва, афіша для внутрішньої розсилки й проста форма: «Розкажіть про себе або про колегу, яким пишаєтеся».</div></li>
+      <li class="y"><div><span class="when">Тижні 2–3</span><b>Запрошення до команди</b>Посилання на <a href="heroi/">сторінку для героїв</a>, кілька слів від керівництва й афіша для внутрішньої розсилки. Спершу — особисто тим, про кого ви вже знаєте.</div></li>
       <li><div><span class="when">Тижні 2–3</span><b>Лекція про покликання</b>Карітас проводить лекцію для команди: що таке покликання і чому воно важливе для людини.</div></li>
       <li class="y"><div><span class="when">Тиждень 4</span><b>Вибір героїв</b>Карітас і HR разом переглядають заявки. Кожна участь — добровільна.</div></li>
       <li><div><span class="when">Місяць 2</span><b>Інтерв'ю й тексти</b>Розмова з героєм у зручний час, фото, написання історії. Пише ваш комунікаційник або наш підрядник, Карітас редагує. Герой погоджує текст перед публікацією.</div></li>
       <li class="y"><div><span class="when">Місяць 3</span><b>Публікація</b>Історії виходять у внутрішніх каналах компанії з афішами для розсилок. За згодою героя — на сайті Карітасу (новини й сторінка спецпроєкту), у Facebook «Покликані діяти» та в сторіс.</div></li>
       <li><div><span class="when">Місяць 3</span><b>Зустріч «Покликані діяти» у компанії</b>Герої розповідають про свою справу, колеги можуть долучитися.</div></li>
       <li class="y"><div><span class="when">Після пілоту</span><b>Дайджест і підсумки</b>Збираємо історії в дайджест для мережі Карітасів і розсилок проєктів. Вирішуємо разом, чи робити програму постійною — наприклад, одна історія на місяць.</div></li>
+    </ol>
+  </div>
+</section>
+
+<section id="share" class="share">
+  <div class="wrap share-grid">
+    <div>
+      <div class="eyebrow">Як розповісти команді й героям</div>
+      <h2>Замість презентації — одна сторінка</h2>
+      <p class="lead">Ми зробили окрему сторінку для ваших колег. Простими словами вона пояснює, навіщо розповідати свою історію і як це відбувається. Її можна просто надіслати.</p>
+      <div class="share-cta">
+        <a class="btn y" href="heroi/" target="_blank" rel="noopener">Відкрити сторінку для героїв</a>
+        <button class="btn w" type="button" id="copyLink">Скопіювати посилання</button>
+      </div>
+      <p class="share-url">svitlanasom.github.io/poklykani-diyaty-hr/heroi/</p>
+    </div>
+    <ol class="share-steps">
+      <li><b>Згадайте, про кого вже знаєте</b>Напевно, у команді є люди, про чиї справи ви чули: хтось волонтерить, хтось допомагає сусідам чи прилаштовує тварин.</li>
+      <li><b>Надішліть їм посилання особисто</b>Кілька теплих слів від вас — «я про тебе подумала» — важать більше за будь-яку розсилку.</li>
+      <li><b>Поділіться з усією командою</b>У загальному чаті чи розсилці. Можливо, є герої, про яких ви ще не знаєте.</li>
+      <li><b>Далі — ми</b>Хто відгукнеться, з тим ми зв'яжемося й домовимося про розмову.</li>
     </ol>
   </div>
 </section>
@@ -634,5 +671,16 @@ footer{background:var(--cream2);padding:26px 0;font-size:13px;text-align:center;
   <div class="wrap">Карітас України · Проєкт «Покликані діяти» · <a href="https://caritas.ua/poklykani-diyaty/" target="_blank" rel="noopener">caritas.ua/poklykani-diyaty</a></div>
 </footer>
 
+<script>
+(function(){
+  var b=document.getElementById('copyLink'); if(!b) return;
+  var url='https://svitlanasom.github.io/poklykani-diyaty-hr/heroi/';
+  b.addEventListener('click',function(){
+    var done=function(){b.textContent='Скопійовано ✓';setTimeout(function(){b.textContent='Скопіювати посилання'},2000)};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(url).then(done,function(){prompt('Скопіюйте посилання:',url)})}
+    else{prompt('Скопіюйте посилання:',url)}
+  });
+})();
+</script>
 </body>
 </html>
