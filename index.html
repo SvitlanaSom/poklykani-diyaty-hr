@@ -7,7 +7,9 @@
 <meta name="description" content="Пропозиція Карітасу України для HR: спільна програма, що розповідає про працівників, які мають покликання допомагати іншим.">
 <meta property="og:title" content="Покликані діяти у вашій команді">
 <meta property="og:description" content="Спільна програма Карітасу України і компанії: історії працівників, які не можуть пройти повз.">
-<meta property="og:image" content="banner.webp">
+<meta property="og:image" content="https://svitlanasom.github.io/poklykani-diyaty-hr/banner.webp">
+<meta property="og:url" content="https://svitlanasom.github.io/poklykani-diyaty-hr/">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -20,19 +22,27 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:"Montserrat",system-ui,sans-serif;background:var(--cream);color:var(--text);line-height:1.6;font-size:17px;overflow-x:hidden}
-img{max-width:100%;display:block}
+/* height:auto — щоб картинки не сплющувались на вузьких екранах */
+img{max-width:100%;height:auto;display:block}
 a{color:var(--blue)}
-.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px;position:relative}
 section{padding:72px 0;position:relative}
 h2{font-weight:900;text-transform:uppercase;color:var(--blue);font-size:clamp(24px,3.4vw,32px);line-height:1.15;margin-bottom:18px;letter-spacing:.01em}
 h3{font-weight:800;color:var(--blue);font-size:20px;line-height:1.25;margin-bottom:8px}
 .lead{font-size:clamp(17px,2vw,20px);color:var(--ink);font-weight:500;max-width:760px}
-.muted{color:var(--text)}
 .btn{display:inline-block;background:var(--blue);color:var(--white);text-decoration:none;font-weight:700;text-transform:uppercase;font-size:14px;letter-spacing:.04em;padding:15px 26px;border-radius:999px;transition:background .2s}
 .btn:hover{background:var(--blue-d)}
 .btn.y{background:var(--yellow);color:var(--ink)}
 .btn.y:hover{background:#f3bd22}
 .btn.o{background:transparent;color:var(--blue);box-shadow:inset 0 0 0 2px var(--blue)}
+.btn.w{background:transparent;color:var(--white);box-shadow:inset 0 0 0 2px var(--white)}
+.btn.w:hover{background:rgba(255,255,255,.12)}
+.after{margin-top:20px}
+.small{font-size:15px}
+
+/* декоративні ілюстрації: в межах .wrap, поруч із заголовком, однаковий розмір */
+.head{display:flex;justify-content:space-between;align-items:flex-start;gap:24px}
+.head .deco{width:96px;flex:none;margin-top:-14px}
 
 /* top */
 .top{background:var(--cream2);border-bottom:1px solid var(--beige)}
@@ -56,7 +66,7 @@ h3{font-weight:800;color:var(--blue);font-size:20px;line-height:1.25;margin-bott
 
 /* split */
 .split{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
-.split .art{max-width:340px;margin:0 auto}
+.split .art{width:100%;max-width:320px;margin:0 auto}
 .split p+p{margin-top:14px}
 
 /* cards */
@@ -72,11 +82,29 @@ h3{font-weight:800;color:var(--blue);font-size:20px;line-height:1.25;margin-bott
 .person span{font-size:15px}
 .note{margin-top:20px;font-size:14px;color:var(--text);font-style:italic}
 
+/* хто пише історії */
+.options{display:grid;grid-template-columns:1fr auto 1fr;gap:20px;align-items:stretch;margin-top:28px}
+.option{background:var(--white);border-radius:18px;padding:28px 26px;border:2px solid var(--blue)}
+.option .lbl{display:inline-block;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--ink);background:var(--yellow);padding:4px 12px;border-radius:999px;margin-bottom:12px}
+.option p{font-size:16px}
+.or{align-self:center;font-weight:900;color:var(--blue);text-transform:uppercase;font-size:15px}
+.editor{margin-top:20px;background:var(--blue);color:var(--white);border-radius:18px;padding:22px 26px;display:flex;gap:18px;align-items:center}
+.editor b{color:var(--yellow);text-transform:uppercase;font-weight:900;letter-spacing:.03em;flex:none}
+
 /* benefit table */
-.benefits{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:26px}
+.benefits{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:26px}
 .benefit{background:var(--white);border-radius:16px;padding:22px}
 .benefit h3{font-size:17px;text-transform:uppercase;letter-spacing:.03em}
 .benefit p{font-size:15px}
+
+/* що дає Карітас */
+.give-group{margin-top:30px}
+.give-group h3{font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink);margin-bottom:12px}
+.give{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gift{background:var(--cream2);border-radius:16px;padding:22px 22px 20px;border-left:5px solid var(--yellow)}
+.gift b{display:block;color:var(--blue);font-weight:800;font-size:17px;margin-bottom:6px;line-height:1.3}
+.gift span{font-size:15px;display:block}
+.gift .num{display:inline-block;margin-top:10px;font-size:13px;font-weight:800;color:var(--ink);background:var(--yellow);padding:3px 10px;border-radius:999px}
 
 /* steps */
 .steps{list-style:none;counter-reset:s;margin-top:28px;display:grid;gap:14px}
@@ -102,37 +130,41 @@ h3{font-weight:800;color:var(--blue);font-size:20px;line-height:1.25;margin-bott
 /* ethics */
 .ethics{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:12px 28px;margin-top:22px}
 .ethics li{padding-left:34px;position:relative}
-.ethics li::before{content:"";position:absolute;left:0;top:5px;width:20px;height:20px;border-radius:50%;background:var(--yellow);box-shadow:inset 0 0 0 5px var(--yellow),inset 0 0 0 20px var(--blue)}
+.ethics li::before{content:"";position:absolute;left:0;top:5px;width:20px;height:20px;border-radius:50%;box-shadow:inset 0 0 0 5px var(--yellow),inset 0 0 0 20px var(--blue)}
 
 /* measure */
-.measure{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:24px}
+.measure{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
 .measure div{background:var(--white);border-radius:14px;padding:18px 16px;font-size:15px;border-left:5px solid var(--blue)}
 
 /* final */
 .final{background:var(--blue);color:var(--white);text-align:center}
 .final h2{color:var(--yellow)}
 .final p{max-width:680px;margin:0 auto 24px;font-size:18px}
-.final .who{margin-top:34px;display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap}
+.final .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.final .who{margin-top:34px;display:flex;flex-direction:column;align-items:center;gap:4px}
 .final .who b{font-weight:800}
-.final a.l{color:var(--white)}
-.deco{position:absolute;width:110px;opacity:.95;pointer-events:none}
+.final .who a{color:var(--white)}
 footer{background:var(--cream2);padding:26px 0;font-size:13px;text-align:center;color:var(--text)}
 
 @media (max-width:900px){
-  .split{grid-template-columns:1fr}
-  .split .art{max-width:220px}
-  .cards{grid-template-columns:1fr}
+  .split{grid-template-columns:1fr;gap:28px}
+  .split .art{max-width:180px}
+  .cards,.give,.benefits{grid-template-columns:1fr 1fr}
   .people{grid-template-columns:1fr 1fr}
   .measure{grid-template-columns:1fr 1fr}
-  .deco{display:none}
+  .options{grid-template-columns:1fr}
+  .or{text-align:center}
+  .head .deco{width:72px}
 }
 @media (max-width:600px){
   section{padding:52px 0}
-  .people,.formats,.ethics,.measure{grid-template-columns:1fr}
+  .cards,.give,.benefits,.people,.formats,.ethics,.measure{grid-template-columns:1fr}
   .steps li{grid-template-columns:44px 1fr;gap:12px;padding:16px}
   .steps li::before{width:40px;height:40px;font-size:18px}
   .top span{display:none}
   .wrap{padding:0 16px}
+  .head .deco{display:none}
+  .editor{flex-direction:column;align-items:flex-start;gap:6px}
 }
 </style>
 </head>
@@ -161,13 +193,12 @@ footer{background:var(--cream2);padding:26px 0;font-size:13px;text-align:center;
 </div>
 
 <section id="idea">
-  <img class="deco" src="ptashka.png" alt="" style="right:4%;top:40px">
   <div class="wrap split">
     <div>
       <h2>Не про те, як краще працювати</h2>
       <p class="lead">Ця програма — про те, які неймовірні люди вже є у вашій команді.</p>
       <p>Хтось волонтерить, хтось учить дітей, хтось рятує тварин чи згуртовує свою громаду. Коли колеги бачать це одне в одному, зростають повага, довіра й відчуття, що ти серед своїх.</p>
-      <p>Карітас України бере на себе методологію, інтерв'ю й написання історій. Компанія відкриває двері: допомагає знайти героїв і поділитися їхніми історіями з командою.</p>
+      <p>Карітас України дає методологію, редагування й поширення історій. Пише їх комунікаційник вашого бренду або наш підрядник. Компанія відкриває двері: допомагає знайти героїв і поділитися їхніми історіями з командою.</p>
     </div>
     <img class="art" src="vazon.png" alt="" width="400" height="400">
   </div>
@@ -182,15 +213,19 @@ footer{background:var(--cream2);padding:26px 0;font-size:13px;text-align:center;
       <div class="card"><div class="ic">2</div><h3>Не заради нагород</h3><p>Вони допомагають, бо інакше просто не вміють.</p></div>
       <div class="card"><div class="ic">3</div><h3>Добро поруч</h3><p>Кожна добра справа, навіть найменша, має значення.</p></div>
     </div>
-    <p style="margin-top:24px">Серед героїв проєкту вже є засновниця ГО «Бачити серцем» Олеся Яскевич і журналістка та дослідниця Анна Лодигіна. Історії публікуються на сайті Карітасу України з хештегом #покликанідіяти.</p>
+    <p class="after">Серед героїв проєкту вже є засновниця ГО «Бачити серцем» Олеся Яскевич і журналістка та дослідниця Анна Лодигіна. Історії публікуються на сайті Карітасу України з хештегом #покликанідіяти.</p>
   </div>
 </section>
 
 <section id="program">
-  <img class="deco" src="kvitka.png" alt="" style="right:3%;top:30px">
   <div class="wrap">
-    <h2>Ідея програми для вашої команди</h2>
-    <p class="lead">Герої — ваші працівники. Ми шукаємо не найкращих спеціалістів, а людей з покликанням поза посадою.</p>
+    <div class="head">
+      <div>
+        <h2>Ідея програми для вашої команди</h2>
+        <p class="lead">Герої — ваші працівники. Ми шукаємо не найкращих спеціалістів, а людей з покликанням поза посадою.</p>
+      </div>
+      <img class="deco" src="kvitka.png" alt="" width="300" height="300">
+    </div>
     <div class="people">
       <div class="person"><b>Бухгалтерка</b><span>щосуботи веде гурток для дітей переселенців</span></div>
       <div class="person"><b>Розробник</b><span>волонтерить у притулку для тварин</span></div>
@@ -198,20 +233,82 @@ footer{background:var(--cream2);padding:26px 0;font-size:13px;text-align:center;
       <div class="person"><b>Водій</b><span>возить допомогу в прифронтові громади</span></div>
     </div>
     <p class="note">Приклади для ілюстрації. Справжні історії знайдемо разом із вашою командою.</p>
-    <p style="margin-top:18px">Історії розповідають про людину, а не про її KPI. Компанія тут — не герой, а місце, де такі люди працюють і де їх помічають.</p>
+    <p class="after">Історії розповідають про людину, а не про її KPI. Компанія тут — не герой, а місце, де такі люди працюють і де їх помічають.</p>
   </div>
 </section>
 
-<section id="value" class="beige">
+<section id="writers" class="beige">
+  <div class="wrap">
+    <h2>Хто пише історії</h2>
+    <p class="lead">Компанія обирає один із двох варіантів — залежно від того, чи є у вас власна команда комунікацій.</p>
+    <div class="options">
+      <div class="option">
+        <span class="lbl">Варіант 1</span>
+        <h3>Комунікаційник вашого бренду</h3>
+        <p>Ваш фахівець з комунікацій проводить інтерв'ю й пише історії. Карітас дає методологію, питання для розмови й редагує тексти.</p>
+      </div>
+      <div class="or">або</div>
+      <div class="option">
+        <span class="lbl">Варіант 2</span>
+        <h3>Підрядник — наш субпартнер</h3>
+        <p>Карітас пропонує перевіреного підрядника, який уже працює з нами в проєкті. Він проводить інтерв'ю й пише тексти, а ми редагуємо.</p>
+      </div>
+    </div>
+    <div class="editor"><b>В обох варіантах</b><span>Карітас України лишається редактором: перевіряє кожну історію на відповідність тону проєкту й етичним правилам. Герой погоджує текст перед публікацією.</span></div>
+  </div>
+</section>
+
+<section id="value">
   <div class="wrap">
     <h2>Що це дає</h2>
     <div class="benefits">
       <div class="benefit"><h3>Героям</h3><p>Визнання того, що вони роблять тихо й без нагород. Їхня справа отримує увагу й нових помічників.</p></div>
       <div class="benefit"><h3>Колегам</h3><p>Натхнення й простий вхід: можна долучитися до справи колеги, а не шукати самостійно.</p></div>
-      <div class="benefit"><h3>HR</h3><p>Живий інструмент залученості поза бонусами й тімбілдингами. Готова методологія, тексти й супровід.</p></div>
-      <div class="benefit"><h3>Компанії</h3><p>Культура, де цінують людину цілком. Справжні історії для внутрішніх комунікацій — за згодою героїв.</p></div>
+      <div class="benefit"><h3>HR</h3><p>Живий інструмент залученості поза бонусами й тімбілдингами. Готова методологія, редагування й супровід.</p></div>
+      <div class="benefit"><h3>Компанії</h3><p>Культура, де цінують людину цілком. Справжні історії для внутрішніх комунікацій, а також згадка й охоплення через сайт, Facebook і дайджест Карітасу — за згодою героїв.</p></div>
       <div class="benefit"><h3>Громадам</h3><p>Більше людей, які допомагають там, де живуть.</p></div>
     </div>
+  </div>
+</section>
+
+<section id="caritas" class="beige">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <h2>Що дає Карітас України</h2>
+        <p class="lead">Від нас — редагування, поширення й супровід програми. Ваші історії побачить не лише команда, а й широка спільнота Карітасу.</p>
+      </div>
+      <img class="deco" src="ptashka.png" alt="" width="300" height="300">
+    </div>
+
+    <div class="give-group">
+      <h3>Редагування й контент</h3>
+      <div class="give">
+        <div class="gift"><b>Редакторська функція</b><span>Редагуємо всі історії, хто б їх не писав.</span></div>
+        <div class="gift"><b>Передача контенту</b><span>Готові тексти й матеріали передаємо компанії для внутрішніх каналів.</span></div>
+        <div class="gift"><b>Афіші для внутрішніх розсилок</b><span>Допомагаємо зробити афіші, щоб історії помітили в компанії.</span></div>
+      </div>
+    </div>
+
+    <div class="give-group">
+      <h3>Поширення в каналах Карітасу</h3>
+      <div class="give">
+        <div class="gift"><b>Сайт Карітасу України</b><span>Історії в новинах і на сторінці спецпроєкту «Покликані діяти».</span></div>
+        <div class="gift"><b>Facebook «Покликані діяти»</b><span>Публікації на сторінці проєкту.</span></div>
+        <div class="gift"><b>Сторіс</b><span>Супровідні сторіс, які підтримують історії й проєкт.</span></div>
+      </div>
+    </div>
+
+    <div class="give-group">
+      <h3>Лекція й розсилки</h3>
+      <div class="give">
+        <div class="gift"><b>Лекція про покликання</b><span>Пояснимо, що таке покликання і чому воно важливе для людини.</span></div>
+        <div class="gift"><b>Дайджест для мережі Карітасів</b><span>Збираємо історії в дайджест і розсилаємо мережею Карітасів.</span><span class="num">≈ 3000 підписників</span></div>
+        <div class="gift"><b>Щомісячні розсилки</b><span>Розповімо про програму підписникам проєктів «Покликані діяти» та «Що там?».</span></div>
+      </div>
+    </div>
+
+    <p class="after small">Усі публікації в публічних каналах — лише за окремою згодою героя.</p>
   </div>
 </section>
 
@@ -220,13 +317,14 @@ footer{background:var(--cream2);padding:26px 0;font-size:13px;text-align:center;
     <h2>Як це працює</h2>
     <p class="lead">Пропонуємо пілот на 3 місяці, далі — спільне рішення про постійний формат. Терміни й кількість історій узгодимо разом.</p>
     <ol class="steps">
-      <li><div><span class="when">Тиждень 1</span><b>Зустріч з HR</b>Узгоджуємо цілі, канали, правила згоди й контактну особу від компанії.</div></li>
-      <li class="y"><div><span class="when">Тижні 2–3</span><b>Запрошення до команди</b>Коротке відео чи лист від керівництва й проста форма: «Розкажіть про себе або про колегу, яким пишаєтеся».</div></li>
-      <li><div><span class="when">Тиждень 4</span><b>Вибір героїв</b>Карітас і HR разом переглядають заявки. Кожна участь — добровільна.</div></li>
-      <li class="y"><div><span class="when">Місяць 2</span><b>Інтерв'ю й тексти</b>Розмова з героєм у зручний час, фото, написання історії. Герой погоджує текст перед публікацією.</div></li>
-      <li><div><span class="when">Місяць 3</span><b>Публікація</b>Історії виходять у внутрішніх каналах компанії, а за згодою — на сайті Карітасу.</div></li>
-      <li class="y"><div><span class="when">Місяць 3</span><b>Зустріч «Покликані діяти» у компанії</b>Герої розповідають про свою справу, колеги можуть долучитися.</div></li>
-      <li><div><span class="when">Після пілоту</span><b>Підсумки</b>Вирішуємо разом, чи робити програму постійною — наприклад, одна історія на місяць.</div></li>
+      <li><div><span class="when">Тиждень 1</span><b>Зустріч з HR</b>Узгоджуємо цілі, канали, правила згоди й контактну особу від компанії. Вирішуємо, хто пише історії: ваш комунікаційник чи наш підрядник.</div></li>
+      <li class="y"><div><span class="when">Тижні 2–3</span><b>Запрошення до команди</b>Коротке відео чи лист від керівництва, афіша для внутрішньої розсилки й проста форма: «Розкажіть про себе або про колегу, яким пишаєтеся».</div></li>
+      <li><div><span class="when">Тижні 2–3</span><b>Лекція про покликання</b>Карітас проводить лекцію для команди: що таке покликання і чому воно важливе для людини.</div></li>
+      <li class="y"><div><span class="when">Тиждень 4</span><b>Вибір героїв</b>Карітас і HR разом переглядають заявки. Кожна участь — добровільна.</div></li>
+      <li><div><span class="when">Місяць 2</span><b>Інтерв'ю й тексти</b>Розмова з героєм у зручний час, фото, написання історії. Пише ваш комунікаційник або наш підрядник, Карітас редагує. Герой погоджує текст перед публікацією.</div></li>
+      <li class="y"><div><span class="when">Місяць 3</span><b>Публікація</b>Історії виходять у внутрішніх каналах компанії з афішами для розсилок. За згодою героя — на сайті Карітасу (новини й сторінка спецпроєкту), у Facebook «Покликані діяти» та в сторіс.</div></li>
+      <li><div><span class="when">Місяць 3</span><b>Зустріч «Покликані діяти» у компанії</b>Герої розповідають про свою справу, колеги можуть долучитися.</div></li>
+      <li class="y"><div><span class="when">Після пілоту</span><b>Дайджест і підсумки</b>Збираємо історії в дайджест для мережі Карітасів і розсилок проєктів. Вирішуємо разом, чи робити програму постійною — наприклад, одна історія на місяць.</div></li>
     </ol>
   </div>
 </section>
@@ -237,11 +335,13 @@ footer{background:var(--cream2);padding:26px 0;font-size:13px;text-align:center;
     <p class="lead">Стартуємо з текстових історій з фото, далі додаємо формати за бажанням компанії.</p>
     <div class="formats">
       <div class="format"><b>Історія-інтерв'ю з фото</b><span>Внутрішній портал або розсилка; сайт Карітасу за згодою</span></div>
-      <div class="format"><b>Короткий пост з цитатою героя</b><span>Корпоративний чат, Slack або Teams</span></div>
-      <div class="format"><b>Зустріч з героями</b><span>Офлайн в офісі або онлайн на загальній зустрічі команди</span></div>
+      <div class="format"><b>Афіша для внутрішньої розсилки</b><span>Робимо разом з Карітасом, розсилає компанія</span></div>
+      <div class="format"><b>Короткий пост з цитатою героя</b><span>Корпоративний чат, Slack або Teams; Facebook «Покликані діяти» за згодою</span></div>
+      <div class="format"><b>Сторіс</b><span>Супровід історій у соцмережах проєкту за згодою</span></div>
+      <div class="format"><b>Зустріч з героями й лекція</b><span>Офлайн в офісі або онлайн на загальній зустрічі команди</span></div>
       <div class="format"><b>Коротке відео</b><span>За бажанням: внутрішні канали, соцмережі компанії за згодою</span></div>
     </div>
-    <p style="margin-top:20px">Головна аудиторія програми — сама команда. Публічні публікації — лише після окремої згоди героя.</p>
+    <p class="after">Головна аудиторія програми — сама команда. Публічні публікації — лише після окремої згоди героя.</p>
   </div>
 </section>
 
@@ -254,15 +354,19 @@ footer{background:var(--cream2);padding:26px 0;font-size:13px;text-align:center;
         <tbody>
           <tr><td>Концепція й методологія</td><td>Готує й адаптує під компанію</td><td>Погоджує</td></tr>
           <tr><td>Запрошення до команди й форма</td><td>Пише текст і робить форму</td><td>Розсилає внутрішніми каналами</td></tr>
+          <tr><td>Афіші для розсилок</td><td>Допомагає зробити</td><td>Розсилає</td></tr>
+          <tr><td>Лекція про покликання</td><td>Проводить</td><td>Організовує місце й час</td></tr>
           <tr><td>Вибір героїв</td><td>Разом з HR</td><td>Разом з Карітасом</td></tr>
-          <tr><td>Інтерв'ю, тексти, редагування</td><td>Команда й амбасадорки проєкту</td><td>Допомагає з часом і місцем для розмов</td></tr>
+          <tr><td>Інтерв'ю й тексти</td><td>За потреби пропонує підрядника-субпартнера</td><td>Комунікаційник бренду пише сам або обирає нашого підрядника</td></tr>
+          <tr><td>Редагування</td><td>Редагує всі тексти</td><td>Погоджує з героєм</td></tr>
           <tr><td>Фото</td><td colspan="2">Узгодимо окремо</td></tr>
-          <tr><td>Публікація</td><td>На сайті Карітасу за згодою</td><td>У внутрішніх каналах</td></tr>
+          <tr><td>Публікація</td><td>Сайт (новини й спецпроєкт), Facebook «Покликані діяти», сторіс — за згодою</td><td>Внутрішні канали</td></tr>
+          <tr><td>Дайджест і розсилки</td><td>Формує й розсилає мережею Карітасів і підписникам проєктів</td><td>Погоджує згадку компанії</td></tr>
           <tr><td>Зустріч з героями</td><td>Модерує</td><td>Організовує місце й час</td></tr>
         </tbody>
       </table>
     </div>
-    <p style="margin-top:16px;font-size:15px">Фінансова участь компанії, якщо буде, — предмет окремої домовленості.</p>
+    <p class="after small">Фінансова участь компанії, якщо буде, — предмет окремої домовленості.</p>
   </div>
 </section>
 
@@ -274,6 +378,7 @@ footer{background:var(--cream2);padding:26px 0;font-size:13px;text-align:center;
       <li>Герой сам вирішує, про що розповідати, і погоджує текст та фото перед публікацією.</li>
       <li>Якщо колегу запропонували інші, він може відмовитися без пояснень.</li>
       <li>Внутрішня й публічна публікація — дві окремі згоди.</li>
+      <li>Для соцмереж, сторіс і дайджесту герой дає окрему згоду.</li>
       <li>Людей, яким допомагає герой, не називаємо й не фотографуємо без їхньої згоди.</li>
       <li>Програма не ранжує людей: тут немає «найкращого волонтера» чи конкурсу.</li>
       <li>Дані з форми бачать лише команда проєкту й контактна особа HR.</li>
@@ -288,6 +393,7 @@ footer{background:var(--cream2);padding:26px 0;font-size:13px;text-align:center;
     <div class="measure">
       <div>Скільки колег розповіли про себе чи запропонували героя</div>
       <div>Скільки історій опубліковано й скільки людей їх прочитали</div>
+      <div>Охоплення публікацій на сайті, у Facebook і в дайджесті</div>
       <div>Скільки колег долучилися до справ героїв</div>
       <div>Коротке опитування після пілоту: що нового дізналися про колег</div>
       <div>Відгуки самих героїв</div>
@@ -299,9 +405,14 @@ footer{background:var(--cream2);padding:26px 0;font-size:13px;text-align:center;
   <div class="wrap">
     <h2>Наступний крок</h2>
     <p>Почнімо з 30-хвилинної зустрічі: покажемо проєкт і послухаємо, що важливо для вашої команди. Узгодимо цілі, канали, терміни пілоту й контактну особу від компанії.</p>
-    <a class="btn y" href="https://caritas.ua/poklykani-diyaty/" target="_blank" rel="noopener">Познайомитися з проєктом</a>
+    <div class="cta">
+      <!-- TODO: вставити email або посилання на календар замість # -->
+      <a class="btn y" href="#">Домовитися про зустріч</a>
+      <a class="btn w" href="https://caritas.ua/poklykani-diyaty/" target="_blank" rel="noopener">Познайомитися з проєктом</a>
+    </div>
     <div class="who">
       <span><b>Світлана Сом</b>, авторка проєкту «Покликані діяти»</span>
+      <!-- TODO: вставити контакт, напр. <a href="mailto:...">...</a> -->
     </div>
   </div>
 </section>
