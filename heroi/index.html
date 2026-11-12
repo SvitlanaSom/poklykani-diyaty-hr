@@ -98,7 +98,10 @@ h2{font-weight:900;text-transform:uppercase;color:var(--blue);font-size:clamp(28
 .flip .in{position:relative;width:100%;height:100%;transition:transform .7s cubic-bezier(.3,.7,.2,1);transform-style:preserve-3d}
 .flip:hover .in,.flip.on .in,.flip:focus-visible .in{transform:rotateY(180deg)}
 .face{position:absolute;inset:0;border-radius:22px;padding:28px 24px;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;flex-direction:column;justify-content:space-between}
-.face.f{background:var(--white);border:2px solid var(--beige)}
+.face.f{background:var(--cream);border:2px solid var(--beige);overflow:hidden}
+.face.f .art{position:absolute;right:-6px;bottom:-4px;width:58%;max-width:170px;pointer-events:none;transition:transform .5s}
+.flip:hover .face.f .art{transform:scale(1.05) rotate(-3deg)}
+.face.f q,.face.f small{position:relative;z-index:1}
 .face.f q{font-weight:800;color:var(--ink);font-size:21px;line-height:1.25;quotes:"«" "»"}
 .face.f small{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--blue);display:flex;align-items:center;gap:8px}
 .face.f small::before{content:"↻";font-size:18px}
@@ -286,25 +289,25 @@ footer a{font-weight:700}
     <div class="flips">
       <button class="flip rv" type="button" aria-label="Сумнів: Я не роблю нічого особливого. Відповідь на звороті">
         <div class="in">
-          <div class="face f"><q>Я не роблю нічого особливого</q><small>Переверніть</small></div>
+          <div class="face f"><q>Я не роблю нічого особливого</q><img class="art" src="bq-left.png" alt="" loading="lazy"><small>Переверніть</small></div>
           <div class="face b"><div class="big">“</div><div><b>Саме тому ми й пишемо.</b><span>Те, що для вас — звичайний вівторок, для когось стане доказом: так можна. Кожна добра справа, навіть найменша, має значення.</span></div></div>
         </div>
       </button>
       <button class="flip rv d1" type="button" aria-label="Сумнів: Я не вмію гарно говорити. Відповідь на звороті">
         <div class="in">
-          <div class="face f"><q>Я не вмію гарно говорити</q><small>Переверніть</small></div>
+          <div class="face f"><q>Я не вмію гарно говорити</q><img class="art" src="../ptashka.png" alt="" loading="lazy"><small>Переверніть</small></div>
           <div class="face b"><div class="big">“</div><div><b>І не треба.</b><span>Ви просто розповідаєте, як є. Текст напише команда проєкту, а ви погодите кожне слово перед публікацією.</span></div></div>
         </div>
       </button>
       <button class="flip rv d2" type="button" aria-label="Сумнів: Це ж хвастощі. Відповідь на звороті">
         <div class="in">
-          <div class="face f"><q>Це ж якось хвастощі</q><small>Переверніть</small></div>
+          <div class="face f"><q>Це ж якось хвастощі</q><img class="art" src="../vazon.png" alt="" loading="lazy"><small>Переверніть</small></div>
           <div class="face b"><div class="big">“</div><div><b>Це не про славу.</b><span>Це про те, щоб інші побачили: добро поруч, і до нього можна долучитися. Ваша історія — запрошення, а не пам'ятник.</span></div></div>
         </div>
       </button>
       <button class="flip rv d3" type="button" aria-label="Сумнів: У мене немає часу. Відповідь на звороті">
         <div class="in">
-          <div class="face f"><q>У мене немає на це часу</q><small>Переверніть</small></div>
+          <div class="face f"><q>У мене немає на це часу</q><img class="art" src="bq-right.png" alt="" loading="lazy"><small>Переверніть</small></div>
           <div class="face b"><div class="big">“</div><div><b>Одна розмова.</b><span>У зручний для вас час і формат — наживо, телефоном чи онлайн. Решту ми візьмемо на себе.</span></div></div>
         </div>
       </button>
