@@ -101,7 +101,7 @@ h3{font-weight:800;color:var(--blue);font-size:20px;line-height:1.25;margin-bott
 .give-group{margin-top:30px}
 .give-group h3{font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink);margin-bottom:12px}
 .give{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.gift{background:var(--cream2);border-radius:16px;padding:22px 22px 20px;border-left:5px solid var(--yellow)}
+.gift{background:var(--white);border-radius:16px;padding:22px 22px 20px;border-left:5px solid var(--yellow)}
 .gift b{display:block;color:var(--blue);font-weight:800;font-size:17px;margin-bottom:6px;line-height:1.3}
 .gift span{font-size:15px;display:block}
 .gift .num{display:inline-block;margin-top:10px;font-size:13px;font-weight:800;color:var(--ink);background:var(--yellow);padding:3px 10px;border-radius:999px}
@@ -146,6 +146,73 @@ h3{font-weight:800;color:var(--blue);font-size:20px;line-height:1.25;margin-bott
 .final .who a{color:var(--white)}
 footer{background:var(--cream2);padding:26px 0;font-size:13px;text-align:center;color:var(--text)}
 
+/* ===== декор ===== */
+/* орнаментна стрічка, як вишивка на рушнику */
+.band{height:22px;background:var(--cream) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='22'%3E%3Cpath d='M22 2 L31 11 L22 20 L13 11Z' fill='%230083CB'/%3E%3Cpath d='M22 7 L26 11 L22 15 L18 11Z' fill='%23FECC40'/%3E%3Ccircle cx='2' cy='11' r='2.5' fill='%23FECC40'/%3E%3Ccircle cx='42' cy='11' r='2.5' fill='%23FECC40'/%3E%3C/svg%3E") center/44px 22px repeat-x}
+.band.on-blue{background-color:var(--blue);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='22'%3E%3Cpath d='M22 2 L31 11 L22 20 L13 11Z' fill='%23FECC40'/%3E%3Cpath d='M22 7 L26 11 L22 15 L18 11Z' fill='%23ffffff'/%3E%3Ccircle cx='2' cy='11' r='2.5' fill='%23ffffff'/%3E%3Ccircle cx='42' cy='11' r='2.5' fill='%23ffffff'/%3E%3C/svg%3E")}
+
+/* фестончасті краї бежевих секцій */
+.beige::before,.beige::after{content:"";position:absolute;left:0;right:0;height:14px;background-size:28px 14px;background-repeat:repeat-x;pointer-events:none}
+.beige::before{top:-14px;background-image:radial-gradient(circle at 14px 14px,var(--beige) 13.5px,transparent 14px)}
+.beige::after{bottom:-14px;background-image:radial-gradient(circle at 14px 0,var(--beige) 13.5px,transparent 14px);z-index:1}
+
+/* підпис над заголовком секції */
+.eyebrow{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--ink);margin-bottom:10px}
+.eyebrow::before{content:"";width:14px;height:14px;background:var(--yellow);border:3px solid var(--blue);transform:rotate(45deg);flex:none}
+.final .eyebrow{color:var(--white);justify-content:center}
+
+/* смуга з цифрами */
+.facts{background:var(--cream2);border-top:1px solid var(--beige);border-bottom:1px solid var(--beige)}
+.facts .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.fact{padding:28px 18px;text-align:center;border-right:1px dashed var(--beige)}
+.fact:last-child{border-right:0}
+.fact b{display:block;font-size:clamp(28px,4vw,40px);font-weight:900;color:var(--blue);line-height:1}
+.fact span{display:block;margin-top:8px;font-size:14px;font-weight:600;color:var(--ink)}
+
+/* цитата Сковороди з квітами */
+.quote{position:relative;overflow:hidden}
+.quote .fl{position:absolute;top:50%;transform:translateY(-50%);width:120px;opacity:.9;filter:brightness(0) invert(1)}
+.quote .fl.l{left:4%}
+.quote .fl.r{right:4%;transform:translateY(-50%) scaleX(-1)}
+
+/* іконки в картках */
+.ico{width:50px;height:50px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;margin-bottom:14px}
+.ico svg{width:26px;height:26px;stroke:var(--blue);fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.benefit{border-top:5px solid var(--blue);transition:transform .2s,box-shadow .2s}
+.benefit:hover,.card:hover,.gift:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,131,203,.12)}
+.card,.gift{transition:transform .2s,box-shadow .2s}
+.person{position:relative;overflow:hidden}
+.person::after{content:"";position:absolute;right:-18px;bottom:-18px;width:64px;height:64px;background:url(kvitka.png) center/contain no-repeat;opacity:.18}
+
+/* історія героя */
+.story{display:grid;grid-template-columns:.85fr 1.15fr;gap:44px;align-items:center;margin-top:30px}
+.story .ph{position:relative}
+.story .ph img{border-radius:24px;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 30%;box-shadow:14px 14px 0 var(--yellow)}
+.story .ph .date{position:absolute;top:18px;left:18px;background:var(--yellow);color:var(--ink);font-weight:900;text-align:center;line-height:1.05;padding:10px 12px;border-radius:8px;font-size:22px}
+.story .ph .date small{display:block;font-size:12px;letter-spacing:.06em}
+.story .ph .stamp{position:absolute;right:-22px;bottom:-26px;width:110px}
+.story .who2{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--blue);margin-bottom:8px}
+.story h3{font-size:clamp(22px,2.6vw,28px);color:var(--ink);font-weight:900;line-height:1.2;margin-bottom:16px}
+.story blockquote{position:relative;background:var(--blue);color:var(--white);border-radius:18px;padding:22px 24px 22px 64px;font-weight:700;font-size:18px;line-height:1.4;margin:18px 0}
+.story blockquote::before{content:"«";position:absolute;left:18px;top:4px;font-size:64px;line-height:1;color:var(--yellow);font-weight:900}
+.story p+p{margin-top:12px}
+.story .tags{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 22px}
+.story .tags span{font-size:13px;font-weight:700;background:var(--cream2);border:1px solid var(--beige);padding:5px 12px;border-radius:999px;color:var(--ink)}
+.story-note{margin-top:30px;background:var(--cream2);border:2px dashed var(--blue);border-radius:16px;padding:18px 22px;font-size:15px}
+.story-note b{color:var(--blue)}
+
+/* лінія між кроками */
+.steps{position:relative}
+.steps::before{content:"";position:absolute;left:48px;top:30px;bottom:30px;border-left:3px dotted var(--blue);opacity:.35}
+.steps li{position:relative}
+
+/* велика квітка в фіналі */
+.final{position:relative;overflow:hidden}
+.final .bigfl{position:absolute;width:260px;opacity:.12;filter:brightness(0) invert(1);pointer-events:none}
+.final .bigfl.l{left:-60px;bottom:-30px}
+.final .bigfl.r{right:-60px;top:-20px;transform:scaleX(-1)}
+.final .wrap{z-index:1}
+
 @media (max-width:900px){
   .split{grid-template-columns:1fr;gap:28px}
   .split .art{max-width:180px}
@@ -155,6 +222,12 @@ footer{background:var(--cream2);padding:26px 0;font-size:13px;text-align:center;
   .options{grid-template-columns:1fr}
   .or{text-align:center}
   .head .deco{width:72px}
+  .facts .wrap{grid-template-columns:1fr 1fr}
+  .fact:nth-child(2){border-right:0}
+  .fact:nth-child(-n+2){border-bottom:1px dashed var(--beige)}
+  .story{grid-template-columns:1fr;gap:34px}
+  .story .ph{max-width:420px;margin:0 auto}
+  .quote .fl{width:80px;opacity:.5}
 }
 @media (max-width:600px){
   section{padding:52px 0}
@@ -165,6 +238,11 @@ footer{background:var(--cream2);padding:26px 0;font-size:13px;text-align:center;
   .wrap{padding:0 16px}
   .head .deco{display:none}
   .editor{flex-direction:column;align-items:flex-start;gap:6px}
+  .quote .fl{display:none}
+  .story .ph .stamp{width:80px;right:-8px}
+  .story blockquote{padding-left:52px;font-size:16px}
+  .steps::before{left:37px}
+  .final .bigfl{width:160px}
 }
 </style>
 </head>
@@ -185,17 +263,32 @@ footer{background:var(--cream2);padding:26px 0;font-size:13px;text-align:center;
   </div>
 </header>
 
+<div class="band" aria-hidden="true"></div>
+
+<div class="facts">
+  <div class="wrap">
+    <div class="fact"><b>3 міс.</b><span>пілот програми</span></div>
+    <div class="fact"><b>2</b><span>варіанти, хто пише історії</span></div>
+    <div class="fact"><b>≈3000</b><span>підписників дайджесту Карітасу</span></div>
+    <div class="fact"><b>100%</b><span>добровільна участь</span></div>
+  </div>
+</div>
+
 <div class="quote">
+  <img class="fl l" src="kvitka.png" alt="" width="300" height="300">
+  <img class="fl r" src="kvitka.png" alt="" width="300" height="300">
   <div class="wrap">
     <q>Сродна праця — найсолодша в світі річ</q>
     <small>— Григорій Сковорода</small>
   </div>
 </div>
+<div class="band on-blue" aria-hidden="true"></div>
 
 <section id="idea">
   <div class="wrap split">
     <div>
-      <h2>Не про те, як краще працювати</h2>
+      <div class="eyebrow">Ідея</div>
+    <h2>Не про те, як краще працювати</h2>
       <p class="lead">Ця програма — про те, які неймовірні люди вже є у вашій команді.</p>
       <p>Хтось волонтерить, хтось учить дітей, хтось рятує тварин чи згуртовує свою громаду. Коли колеги бачать це одне в одному, зростають повага, довіра й відчуття, що ти серед своїх.</p>
       <p>Карітас України дає методологію, редагування й поширення історій. Пише їх комунікаційник вашого бренду або наш підрядник. Компанія відкриває двері: допомагає знайти героїв і поділитися їхніми історіями з командою.</p>
@@ -206,6 +299,7 @@ footer{background:var(--cream2);padding:26px 0;font-size:13px;text-align:center;
 
 <section id="about" class="beige">
   <div class="wrap">
+    <div class="eyebrow">Про проєкт</div>
     <h2>Про проєкт «Покликані діяти»</h2>
     <p class="lead"><a href="https://caritas.ua/poklykani-diyaty/" target="_blank" rel="noopener">«Покликані діяти»</a> — проєкт Карітасу України, що стартував у жовтні 2026 року. Він розповідає історії звичайних людей з різних міст і селищ, які не можуть пройти повз і починають діяти там, де вони є.</p>
     <div class="cards">
@@ -221,7 +315,8 @@ footer{background:var(--cream2);padding:26px 0;font-size:13px;text-align:center;
   <div class="wrap">
     <div class="head">
       <div>
-        <h2>Ідея програми для вашої команди</h2>
+        <div class="eyebrow">Програма</div>
+    <h2>Ідея програми для вашої команди</h2>
         <p class="lead">Герої — ваші працівники. Ми шукаємо не найкращих спеціалістів, а людей з покликанням поза посадою.</p>
       </div>
       <img class="deco" src="kvitka.png" alt="" width="300" height="300">
@@ -237,8 +332,34 @@ footer{background:var(--cream2);padding:26px 0;font-size:13px;text-align:center;
   </div>
 </section>
 
-<section id="writers" class="beige">
+<section id="story" class="beige">
   <div class="wrap">
+    <div class="eyebrow">Приклад історії</div>
+    <h2>Так звучить історія «Покликаних діяти»</h2>
+    <p class="lead">Одна з уже опублікованих історій проєкту — щоб було видно тон і глибину, з якою ми розповідаємо про людей.</p>
+    <div class="story">
+      <div class="ph">
+        <img src="yaskevych.jpg" alt="Олеся Яскевич, засновниця ГО «Бачити серцем»" width="732" height="1100" loading="lazy">
+        <div class="date">05<small>ЛИС</small></div>
+        <img class="stamp" src="ptashka.png" alt="" width="300" height="300">
+      </div>
+      <div>
+        <div class="who2">Олеся Яскевич · Київ</div>
+        <h3>Як Олеся Яскевич будує систему, що бачить людину, а не діагноз</h3>
+        <p>Олеся — засновниця громадської організації «Бачити серцем». Усе почалося з її сина Матвія і з власного шляху крізь стереотипи. Сьогодні організація працює з дітьми й молоддю з порушеннями розвитку та з їхніми батьками.</p>
+        <p>Колись команда зосереджувалася лише на дітях. А потім зрозуміла: якщо в мами немає сил жити, будь-яка реабілітація втрачає сенс. Так з'явилися психологічний хаб для батьків і «Перепочинок» — два тижні догляду за дорослою дитиною, поки батьки нарешті відпочивають.</p>
+        <blockquote>Щаслива, стабільна мама зробить для дитини більше, ніж сотня найкращих гуртків</blockquote>
+        <div class="tags"><span>психологічний хаб для мам</span><span>«Перепочинок» для родин</span><span>Космотабір</span></div>
+        <a class="btn" href="https://caritas.ua/olesya-yaskevych-bachyty-sertsem/" target="_blank" rel="noopener">Читати історію повністю</a>
+      </div>
+    </div>
+    <div class="story-note"><b>У вашій програмі</b> героєм стане ваш колега — і так само глибоко, без пафосу, ми розповімо про те, що він робить поза роботою.</div>
+  </div>
+</section>
+
+<section id="writers">
+  <div class="wrap">
+    <div class="eyebrow">Автори історій</div>
     <h2>Хто пише історії</h2>
     <p class="lead">Компанія обирає один із двох варіантів — залежно від того, чи є у вас власна команда комунікацій.</p>
     <div class="options">
@@ -258,24 +379,26 @@ footer{background:var(--cream2);padding:26px 0;font-size:13px;text-align:center;
   </div>
 </section>
 
-<section id="value">
+<section id="value" class="beige">
   <div class="wrap">
+    <div class="eyebrow">Користь</div>
     <h2>Що це дає</h2>
     <div class="benefits">
-      <div class="benefit"><h3>Героям</h3><p>Визнання того, що вони роблять тихо й без нагород. Їхня справа отримує увагу й нових помічників.</p></div>
-      <div class="benefit"><h3>Колегам</h3><p>Натхнення й простий вхід: можна долучитися до справи колеги, а не шукати самостійно.</p></div>
-      <div class="benefit"><h3>HR</h3><p>Живий інструмент залученості поза бонусами й тімбілдингами. Готова методологія, редагування й супровід.</p></div>
-      <div class="benefit"><h3>Компанії</h3><p>Культура, де цінують людину цілком. Справжні історії для внутрішніх комунікацій, а також згадка й охоплення через сайт, Facebook і дайджест Карітасу — за згодою героїв.</p></div>
-      <div class="benefit"><h3>Громадам</h3><p>Більше людей, які допомагають там, де живуть.</p></div>
+      <div class="benefit"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.4-9.3-9A5.2 5.2 0 0 1 12 6a5.2 5.2 0 0 1 9.3 6C19 16.6 12 21 12 21z"/></svg></div><h3>Героям</h3><p>Визнання того, що вони роблять тихо й без нагород. Їхня справа отримує увагу й нових помічників.</p></div>
+      <div class="benefit"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="8" r="3.2"/><circle cx="16.5" cy="9" r="2.6"/><path d="M2.5 20c0-3.3 2.5-5.6 5.5-5.6s5.5 2.3 5.5 5.6M13.5 15.2c.9-.6 1.9-.9 3-.9 2.6 0 4.5 2 4.5 4.8"/></svg></div><h3>Колегам</h3><p>Натхнення й простий вхід: можна долучитися до справи колеги, а не шукати самостійно.</p></div>
+      <div class="benefit"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5 5.4.6-4 3.7 1.1 5.4L12 15l-4.9 2.7 1.1-5.4-4-3.7 5.4-.6z"/></svg></div><h3>HR</h3><p>Живий інструмент залученості поза бонусами й тімбілдингами. Готова методологія, редагування й супровід.</p></div>
+      <div class="benefit"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V7l8-4 8 4v14M9 21v-6h6v6M8 10h.01M12 10h.01M16 10h.01"/></svg></div><h3>Компанії</h3><p>Культура, де цінують людину цілком. Справжні історії для внутрішніх комунікацій, а також згадка й охоплення через сайт, Facebook і дайджест Карітасу — за згодою героїв.</p></div>
+      <div class="benefit"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7M5 9.5V20h14V9.5M10 20v-5h4v5"/></svg></div><h3>Громадам</h3><p>Більше людей, які допомагають там, де живуть.</p></div>
     </div>
   </div>
 </section>
 
-<section id="caritas" class="beige">
+<section id="caritas">
   <div class="wrap">
     <div class="head">
       <div>
-        <h2>Що дає Карітас України</h2>
+        <div class="eyebrow">Внесок Карітасу</div>
+    <h2>Що дає Карітас України</h2>
         <p class="lead">Від нас — редагування, поширення й супровід програми. Ваші історії побачить не лише команда, а й широка спільнота Карітасу.</p>
       </div>
       <img class="deco" src="ptashka.png" alt="" width="300" height="300">
@@ -312,8 +435,9 @@ footer{background:var(--cream2);padding:26px 0;font-size:13px;text-align:center;
   </div>
 </section>
 
-<section id="how">
+<section id="how" class="beige">
   <div class="wrap">
+    <div class="eyebrow">Кроки пілоту</div>
     <h2>Як це працює</h2>
     <p class="lead">Пропонуємо пілот на 3 місяці, далі — спільне рішення про постійний формат. Терміни й кількість історій узгодимо разом.</p>
     <ol class="steps">
@@ -329,8 +453,9 @@ footer{background:var(--cream2);padding:26px 0;font-size:13px;text-align:center;
   </div>
 </section>
 
-<section id="formats" class="beige">
+<section id="formats">
   <div class="wrap">
+    <div class="eyebrow">Формати</div>
     <h2>Формати і канали</h2>
     <p class="lead">Стартуємо з текстових історій з фото, далі додаємо формати за бажанням компанії.</p>
     <div class="formats">
@@ -345,8 +470,9 @@ footer{background:var(--cream2);padding:26px 0;font-size:13px;text-align:center;
   </div>
 </section>
 
-<section id="roles">
+<section id="roles" class="beige">
   <div class="wrap">
+    <div class="eyebrow">Ролі</div>
     <h2>Хто що робить</h2>
     <div class="tablewrap">
       <table class="roles">
@@ -370,8 +496,9 @@ footer{background:var(--cream2);padding:26px 0;font-size:13px;text-align:center;
   </div>
 </section>
 
-<section id="ethics" class="beige">
+<section id="ethics">
   <div class="wrap">
+    <div class="eyebrow">Етика</div>
     <h2>Етика й згода</h2>
     <p class="lead">Участь у програмі — лише добровільна і ніяк не пов'язана з оцінкою роботи.</p>
     <ul class="ethics">
@@ -386,8 +513,9 @@ footer{background:var(--cream2);padding:26px 0;font-size:13px;text-align:center;
   </div>
 </section>
 
-<section id="measure">
+<section id="measure" class="beige">
   <div class="wrap">
+    <div class="eyebrow">Результат</div>
     <h2>Як зрозуміємо, що спрацювало</h2>
     <p class="lead">Цільові цифри поставимо разом на першій зустрічі. Пропонуємо дивитися на таке:</p>
     <div class="measure">
@@ -401,8 +529,12 @@ footer{background:var(--cream2);padding:26px 0;font-size:13px;text-align:center;
   </div>
 </section>
 
+<div class="band" aria-hidden="true"></div>
 <section id="next" class="final">
+  <img class="bigfl l" src="vazon.png" alt="" width="400" height="400">
+  <img class="bigfl r" src="vazon.png" alt="" width="400" height="400">
   <div class="wrap">
+    <div class="eyebrow">Почнімо</div>
     <h2>Наступний крок</h2>
     <p>Почнімо з 30-хвилинної зустрічі: покажемо проєкт і послухаємо, що важливо для вашої команди. Узгодимо цілі, канали, терміни пілоту й контактну особу від компанії.</p>
     <div class="cta">
