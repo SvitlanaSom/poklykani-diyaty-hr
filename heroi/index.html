@@ -142,17 +142,14 @@ h2{font-weight:900;text-transform:uppercase;color:var(--blue);font-size:clamp(28
 .chain b{color:var(--ink);display:block}
 
 /* WHY */
-.why{background:var(--navy);color:var(--white);overflow:hidden}
-.why h2{color:var(--yellow)}
-.why .lead{color:rgba(255,255,255,.92)}
-.why .eyebrow{color:var(--white)}
+.why{background:var(--beige);overflow:hidden}
 .reasons{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:40px}
-.reason{position:relative;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:24px;padding:34px 30px 30px;overflow:hidden;transition:background .3s,transform .3s}
-.reason:hover{background:rgba(255,255,255,.1);transform:translateY(-4px)}
-.reason .num{font-size:96px;font-weight:900;line-height:.8;color:var(--yellow);opacity:.9;margin-bottom:18px;display:block;-webkit-text-stroke:0}
-.reason h3{font-size:24px;font-weight:900;color:var(--white);line-height:1.15;margin-bottom:10px}
-.reason p{color:rgba(255,255,255,.85);font-size:16.5px}
-.reason::after{content:"";position:absolute;right:-30px;bottom:-30px;width:130px;height:130px;background:url(../kvitka.png) center/contain no-repeat;opacity:.08;filter:brightness(0) invert(1)}
+.reason{position:relative;background:var(--white);border:2px solid var(--beige);border-radius:24px;padding:30px 28px 28px;overflow:hidden;transition:box-shadow .3s,transform .3s}
+.reason:hover{box-shadow:0 14px 30px rgba(0,40,70,.1);transform:translateY(-4px)}
+.reason .num{font-size:64px;font-weight:900;line-height:.8;color:var(--yellow);margin-bottom:16px;display:block}
+.reason h3{font-size:22px;font-weight:900;color:var(--ink);line-height:1.2;margin-bottom:10px}
+.reason p{color:var(--text);font-size:16.5px}
+.reason::after{content:"";position:absolute;right:-26px;bottom:-26px;width:120px;height:120px;background:url(../kvitka.png) center/contain no-repeat;opacity:.14}
 
 /* HEROES */
 .heroes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
@@ -260,8 +257,8 @@ footer a{font-weight:700}
   <div class="wrap">
     <div>
       <span class="tag rv">Для тих, хто не може пройти повз</span>
-      <h1 class="rv d1">Ваша історія <span class="mark">важливіша,</span> ніж вам здається.</h1>
-      <p class="sub rv d2">Ви робите добро тихо — без нагород, без оплесків, бо інакше просто не вмієте. Ми хочемо про це розповісти. Бо саме такі історії змінюють інших.</p>
+      <h1 class="rv d1">Ваша історія <span class="mark">потрібна</span> більше, ніж вам здається.</h1>
+      <p class="sub rv d2">Ви допомагаєте людям поруч — просто тому, що інакше не можете. Ми хотіли б про це розповісти. Хтось прочитає й, можливо, теж спробує.</p>
       <div class="cta rv d3">
         <a class="btn" href="https://caritas.ua/poklykani-diyaty/" target="_blank" rel="noopener">Розповісти свою історію</a>
         <a class="btn o" href="#why">Чому це важливо</a>
@@ -285,30 +282,30 @@ footer a{font-weight:700}
   <div class="wrap">
     <div class="eyebrow rv">Знаємо, про що ви зараз подумали</div>
     <h2 class="rv d1">«Та я ж нічого особливого не роблю»</h2>
-    <p class="lead rv d2">Так кажуть майже всі наші герої. Наведіть або торкніться картки — там наша відповідь.</p>
+    <p class="lead rv d2">Так кажуть майже всі наші герої. Наведіть на картку або торкніться — там відповідь.</p>
     <div class="flips">
       <button class="flip rv" type="button" aria-label="Сумнів: Я не роблю нічого особливого. Відповідь на звороті">
         <div class="in">
           <div class="face f"><q>Я не роблю нічого особливого</q><img class="art" src="bq-left.png" alt="" loading="lazy"><small>Переверніть</small></div>
-          <div class="face b"><div class="big">“</div><div><b>Саме тому ми й пишемо.</b><span>Те, що для вас — звичайний вівторок, для когось стане доказом: так можна. Кожна добра справа, навіть найменша, має значення.</span></div></div>
+          <div class="face b"><div class="big">“</div><div><b>Нам саме це й цікаво.</b><span>Те, що для вас звичайний вівторок, для когось — підказка, що так теж можна. Невеликі справи теж рахуються.</span></div></div>
         </div>
       </button>
       <button class="flip rv d1" type="button" aria-label="Сумнів: Я не вмію гарно говорити. Відповідь на звороті">
         <div class="in">
           <div class="face f"><q>Я не вмію гарно говорити</q><img class="art" src="../ptashka.png" alt="" loading="lazy"><small>Переверніть</small></div>
-          <div class="face b"><div class="big">“</div><div><b>І не треба.</b><span>Ви просто розповідаєте, як є. Текст напише команда проєкту, а ви погодите кожне слово перед публікацією.</span></div></div>
+          <div class="face b"><div class="big">“</div><div><b>Цього й не треба.</b><span>Розповідаєте, як є. Текст напишемо ми, а ви його прочитаєте й погодите перед публікацією.</span></div></div>
         </div>
       </button>
       <button class="flip rv d2" type="button" aria-label="Сумнів: Це ж хвастощі. Відповідь на звороті">
         <div class="in">
           <div class="face f"><q>Це ж якось хвастощі</q><img class="art" src="../vazon.png" alt="" loading="lazy"><small>Переверніть</small></div>
-          <div class="face b"><div class="big">“</div><div><b>Це не про славу.</b><span>Це про те, щоб інші побачили: добро поруч, і до нього можна долучитися. Ваша історія — запрошення, а не пам'ятник.</span></div></div>
+          <div class="face b"><div class="big">“</div><div><b>Ми розуміємо.</b><span>Але історія не про те, який ви молодець. Вона про справу — щоб інші дізналися про неї й могли долучитися.</span></div></div>
         </div>
       </button>
       <button class="flip rv d3" type="button" aria-label="Сумнів: У мене немає часу. Відповідь на звороті">
         <div class="in">
           <div class="face f"><q>У мене немає на це часу</q><img class="art" src="bq-right.png" alt="" loading="lazy"><small>Переверніть</small></div>
-          <div class="face b"><div class="big">“</div><div><b>Одна розмова.</b><span>У зручний для вас час і формат — наживо, телефоном чи онлайн. Решту ми візьмемо на себе.</span></div></div>
+          <div class="face b"><div class="big">“</div><div><b>Потрібна одна розмова.</b><span>Коли вам зручно — наживо, телефоном чи онлайн. Усе інше зробимо ми.</span></div></div>
         </div>
       </button>
     </div>
@@ -320,7 +317,7 @@ footer a{font-weight:700}
   <img class="fl r" src="../vazon.png" alt="" width="400" height="400">
   <div class="wrap">
     <p class="rv">Ми віримо, що в кожному місті й селищі є люди, <em>покликані діяти.</em></p>
-    <small class="rv d1">Наша справа — знайти їх, уважно вислухати й розповісти їхні історії так, щоб інші захотіли стати поруч.</small>
+    <small class="rv d1">Ми шукаємо таких людей, слухаємо їх і пишемо про них — щоб інші захотіли долучитися.</small>
   </div>
 </div>
 <div class="band on-blue" aria-hidden="true"></div>
@@ -329,23 +326,23 @@ footer a{font-weight:700}
   <div class="wrap believe-grid">
     <div class="bl-head">
       <div class="eyebrow rv">Чому ми це придумали</div>
-      <h2 class="rv d1">Бо найкраще добро — тихе</h2>
-      <p class="lead rv d2">Ми в Карітасі давно це помітили: найсильніше добро робиться не на сцені. Його роблять на кухнях, у під'їздах, у шкільних класах після уроків. Тихо. Поруч. Щодня.</p>
+      <h2 class="rv d1">Знайти своє — і віддати своїм</h2>
+      <p class="lead rv d2">Ми віримо: допомога, яка наповнює серце, дає паростки всім навколо. І ще віримо, що покликання — це наша справжня українська генетика: знайти своє і віддати своїм. Найчастіше це відбувається тихо — на кухні в сусідки, у під'їзді, у класі після уроків.</p>
       <p class="sign rv d3"><span class="hand">рука до руки</span></p>
       <img class="bl-art rv d3" src="../vazon.png" alt="" width="400" height="400">
     </div>
     <div class="beliefs">
       <div class="belief rv">
         <div class="bi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v2M5.6 5.6l1.4 1.4M3 12h2M19 12h2M17 7l1.4-1.4"/><path d="M8 15a4 4 0 1 1 8 0"/><path d="M4 19h16"/></svg></div>
-        <div><h3>Добро, яке не кричить</h3><p>Воно не збирає лайків і не чекає «дякую». Сусідка заносить гарячий суп літньому чоловікові з третього поверху. Вчителька лишається після уроків із дитиною, якій зараз важко. Ніхто цього не фотографує — а світ тримається саме на цьому.</p></div>
+        <div><h3>Тиха допомога поруч</h3><p>Сусідка заносить суп літньому чоловікові з третього поверху. Вчителька лишається після уроків з дитиною, якій зараз важко. Про таке рідко пишуть — а ми хочемо.</p></div>
       </div>
       <div class="belief rv d1">
         <div class="bi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 11V7.5a1.5 1.5 0 0 1 3 0V11"/><path d="M10 10V5.5a1.5 1.5 0 0 1 3 0V10"/><path d="M13 10V6.5a1.5 1.5 0 0 1 3 0V12"/><path d="M16 9.5a1.5 1.5 0 0 1 3 0V14a7 7 0 0 1-7 7h-.5a6 6 0 0 1-4.6-2.2L4 15.4a1.5 1.5 0 0 1 2.3-2L8 15V9.5"/></svg></div>
-        <div><h3>Рука до руки — це найсолодше</h3><p>Переказати гроші — важливо. Але є інша радість: бути поруч, тримати людину за руку й бачити, як їй легшає просто зараз. Цю мить не замінить жоден звіт. Сковорода називав таке «сродною працею» — і, здається, точно знав, про що каже.</p></div>
+        <div><h3>Рука до руки</h3><p>Гроші — це важливо. Але є ще одна радість: бути поруч і бачити, що людині стало легше. Сковорода називав таке «сродною працею» — коли робиш те, до чого лежить душа.</p></div>
       </div>
       <div class="belief rv d2">
         <div class="bi"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg></div>
-        <div><h3>Бути поруч щодня — це захоплює</h3><p>Одна акція — це добре. А прийти завтра. І післязавтра. І через рік — це вже покликання. Такі люди непомітно тримають на собі цілі світи. І ми просто не можемо перестати ними захоплюватися.</p></div>
+        <div><h3>Бути поруч щодня</h3><p>Одна акція — це добре. А коли людина приходить і завтра, і через місяць, і через рік — це вже покликання. Нас такі люди щиро захоплюють.</p></div>
       </div>
     </div>
   </div>
@@ -364,13 +361,13 @@ footer a{font-weight:700}
     </div>
     <div>
       <div class="eyebrow rv">Як працює одна історія</div>
-      <h2 class="rv d1">Добро розходиться колами</h2>
-      <p class="lead rv d2">Одна розказана історія — як камінь у воді. Ви навіть не побачите всіх, до кого вона дійде.</p>
+      <h2 class="rv d1">Одна історія — багато людей</h2>
+      <p class="lead rv d2">Історію прочитає більше людей, ніж ви думаєте. І дехто з них щось зробить.</p>
       <ol class="chain">
         <li class="rv d1"><i>1</i><div><b>Ви розповідаєте</b>про те, що робите, — просто, як є.</div></li>
-        <li class="rv d2"><i>2</i><div><b>Люди читають</b>і впізнають себе: «я теж так можу».</div></li>
-        <li class="rv d3"><i>3</i><div><b>Хтось робить перший крок</b>— у своєму місті, поруч із собою.</div></li>
-        <li class="rv d3"><i>4</i><div><b>Ваша справа росте</b>— до неї приходять нові люди й підтримка.</div></li>
+        <li class="rv d2"><i>2</i><div><b>Люди читають</b>і думають: «а я б теж міг».</div></li>
+        <li class="rv d3"><i>3</i><div><b>Хтось пробує</b>— у своєму місті, поруч із собою.</div></li>
+        <li class="rv d3"><i>4</i><div><b>Вам пишуть</b>— пропонують допомогу вашій справі.</div></li>
       </ol>
     </div>
   </div>
@@ -379,13 +376,13 @@ footer a{font-weight:700}
 <section class="why" id="why">
   <div class="wrap">
     <div class="eyebrow rv">Чому ваша історія важлива</div>
-    <h2 class="rv d1">Чотири причини сказати «так»</h2>
-    <p class="lead rv d2">І жодна з них — не про славу.</p>
+    <h2 class="rv d1">Навіщо розповідати</h2>
+    <p class="lead rv d2">Коротко — чотири причини.</p>
     <div class="reasons">
-      <div class="reason rv"><span class="num">01</span><h3>Вас побачать — і з'явиться енергія</h3><p>Коли хтось помічає вашу справу й вашу унікальність, приходить нова сила. Визнання — це паливо, яке допомагає не вигоріти й діяти далі.</p></div>
-      <div class="reason rv d1"><span class="num">02</span><h3>Ваша справа знайде помічників</h3><p>Історія розповідає не лише про вас, а й про те, що ви робите. Люди, які її прочитають, зможуть долучитися — часом, руками, ресурсами.</p></div>
-      <div class="reason rv d2"><span class="num">03</span><h3>Інші побачать, що добро — поруч</h3><p>Добро не лише у великих фондах. Воно в сусідці, вчителеві, волонтері з вашого селища. Ваша історія доводить це краще за будь-які слова.</p></div>
-      <div class="reason rv d3"><span class="num">04</span><h3>Кожна людина — цінність</h3><p>Ваша історія нагадує всім просту річ: кожна людина важлива, і особливо це видно в дії. З таких людей і складається наша спільна сила.</p></div>
+      <div class="reason rv"><span class="num">01</span><h3>Коли тебе помічають, сил більшає</h3><p>Коли люди бачать, що ви робите, і кажуть про це вголос, — з'являється енергія робити далі. Це просто приємно і дуже підтримує.</p></div>
+      <div class="reason rv d1"><span class="num">02</span><h3>Справі може хтось допомогти</h3><p>Ми пишемо не лише про вас, а й про те, чим ви займаєтеся. Хтось прочитає й захоче допомогти — часом, руками чи речами.</p></div>
+      <div class="reason rv d2"><span class="num">03</span><h3>Інші побачать, що так можна</h3><p>Допомагають не лише великі фонди. Допомагає сусідка, вчитель, волонтер із селища. Коли про це читаєш, легше почати самому.</p></div>
+      <div class="reason rv d3"><span class="num">04</span><h3>Кожна людина — цінність</h3><p>Кожна людина важлива — і найкраще це видно, коли вона щось робить для інших. Ваша історія саме про це.</p></div>
     </div>
   </div>
 </section>
@@ -393,8 +390,8 @@ footer a{font-weight:700}
 <section id="heroes">
   <div class="wrap">
     <div class="eyebrow rv">Вони вже розповіли</div>
-    <h2 class="rv d1">Ви будете в чудовій компанії</h2>
-    <p class="lead rv d2">Різні міста, різні справи — одне покликання.</p>
+    <h2 class="rv d1">Хто вже розповів</h2>
+    <p class="lead rv d2">Різні люди, різні справи.</p>
     <div class="heroes">
       <a class="hcard rv" href="https://caritas.ua/olesya-yaskevych-bachyty-sertsem/" target="_blank" rel="noopener">
         <div class="ph"><img src="../yaskevych.jpg" alt="Олеся Яскевич" width="732" height="1100" loading="lazy"><div class="d">05<small>ЛИС</small></div></div>
@@ -415,10 +412,10 @@ footer a{font-weight:700}
 <section class="how" id="how">
   <div class="wrap">
     <div class="eyebrow rv">Як це відбувається</div>
-    <h2 class="rv d1">Три кроки — і жодного стресу</h2>
+    <h2 class="rv d1">Три кроки</h2>
     <div class="steps3">
       <div class="st rv"><h3>Напишіть нам</h3><p>Кілька речень — про себе чи про людину, якою пишаєтеся. Не треба гарних слів, просто як є.</p></div>
-      <div class="st rv d1"><h3>Ми зв'яжемося</h3><p>Домовимося про розмову у зручний для вас час і формат. Уважно вислухаємо — без поспіху.</p></div>
+      <div class="st rv d1"><h3>Ми зв'яжемося</h3><p>Домовимося про розмову, коли й як вам зручно. Без поспіху.</p></div>
       <div class="st rv d2"><h3>Історія виходить у світ</h3><p>І надихає інших робити те, до чого лежить душа.</p></div>
     </div>
     <div class="promises">
@@ -433,7 +430,7 @@ footer a{font-weight:700}
 <section id="where">
   <div class="wrap">
     <div class="eyebrow rv">Де вашу історію побачать</div>
-    <h2 class="rv d1">Далеко за межами вашого міста</h2>
+    <h2 class="rv d1">Де вийде історія</h2>
     <div class="where">
       <div class="wh rv"><b>Сайт Карітасу України</b><span>Новини й сторінка спецпроєкту «Покликані діяти»</span></div>
       <div class="wh rv d1"><b>Facebook «Покликані діяти»</b><span>Публікація на сторінці проєкту</span></div>
@@ -450,8 +447,8 @@ footer a{font-weight:700}
   <div class="wrap">
     <p class="q rv">«Сродна праця — найсолодша в світі річ»</p>
     <small class="rv">— Григорій Сковорода</small>
-    <h2 class="rv d1">Якщо ви впізнали себе — ви вже одна з нас</h2>
-    <p class="rv d2">Або знаєте таку людину: сусідку, що опікується самотніми літніми людьми, вчителя, який після уроків збирає дітей, волонтера з вашого селища. Розкажіть нам.</p>
+    <h2 class="rv d1">Впізнали себе? Напишіть нам</h2>
+    <p class="rv d2">Або знаєте когось такого: сусідку, що доглядає самотніх літніх людей, вчителя, який після уроків збирає дітей, волонтера з вашого селища. Розкажіть про них.</p>
     <div class="cta rv d3">
       <a class="btn y" href="https://caritas.ua/poklykani-diyaty/" target="_blank" rel="noopener">Розповісти свою історію</a>
       <a class="btn w" href="https://caritas.ua/poklykani-diyaty/" target="_blank" rel="noopener">Запропонувати героя</a>
