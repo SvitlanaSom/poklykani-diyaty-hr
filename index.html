@@ -52,7 +52,9 @@ h3{font-weight:800;color:var(--blue);font-size:20px;line-height:1.25;margin-bott
 
 /* hero */
 .hero{padding:36px 0 56px;text-align:center;background:var(--cream)}
-.hero .banner{max-width:980px;margin:0 auto 18px;width:100%}
+.hero .bwrap{position:relative;max-width:980px;margin:0 auto 18px}
+.hero .banner{width:100%;margin:0}
+.hero .partner_logo{position:absolute;left:58.6%;top:10.6%;width:17%;height:auto;padding-left:1.4%;border-left:1px solid rgba(0,131,203,.45);box-sizing:content-box}
 .tag{display:inline-block;background:var(--yellow);color:var(--ink);font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.06em;padding:7px 14px;border-radius:6px;margin-bottom:18px}
 .hero h1{font-weight:900;color:var(--ink);font-size:clamp(26px,4.4vw,44px);line-height:1.12;max-width:860px;margin:0 auto 16px}
 .hero h1 em{font-style:normal;color:var(--blue)}
@@ -305,8 +307,7 @@ footer .partner img{height:34px}
 
 <header class="hero">
   <div class="wrap">
-    <img class="banner" src="banner.webp" alt="Покликані діяти — Карітас України" width="1100" height="417">
-    <div class="partner"><span>Партнер проєкту</span><img src="asb-logo.png" alt="Асоціація благодійників України" width="439" height="75"></div>
+    <div class="bwrap"><img class="banner" src="banner.webp" alt="Покликані діяти — Карітас України" width="1100" height="417"><img class="partner_logo" src="asb-logo.png" alt="Асоціація благодійників України" width="439" height="75"></div>
     <div class="tag">Спільний проєкт для вашої команди</div>
     <h1>У вашій команді вже є люди, <em>покликані діяти</em>. Розкажімо про них разом.</h1>
     <p>Пропонуємо запустити у вашій компанії внутрішню програму «Покликані діяти»: знайти серед працівників тих, хто поза роботою допомагає іншим, і розповісти їхні історії.</p>
